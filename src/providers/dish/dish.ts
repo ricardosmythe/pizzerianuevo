@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-
 import { dbURL } from '../../shared/dburl';
 import { Dish } from'../../shared/dish';
 
