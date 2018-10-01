@@ -139,7 +139,7 @@
       "image": "images/tom.jpg",
       "designation": "Inventor de la deliciosa pizza",
       "abbr": "Fundador",
-      "featured": "false",
+      "featured": "true",
       "description": "Estando en un rato de ocio creo la pizza que a todos nos gusta. Ahora cuenta con x número de restaurantes a nivel internacional."
     },
     {
@@ -148,7 +148,7 @@
       "image": "images/val.jpg",
       "designation": "El segundón",
       "abbr": "Chef",
-      "featured": "false",
+      "featured": "true",
       "description": "El chef que prepara todo lo demás."
     }
   ],

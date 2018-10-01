@@ -20,4 +20,16 @@ export class LeaderProvider {
     console.log('Hello LeaderProvider Provider');
   }
 
+  getLeader(): Observable<Leader[]>{
+    return this.http.get<Leader[]>(dbURL + 'leaders').map(
+      res => res
+    );
+  }
+
+  getFeaturedLeader(): Observable<Leader>{
+    return this.http.get<Leader>(dbURL + 'leaders?featured=true').map(
+      res => res
+    )
+  }
+
 }

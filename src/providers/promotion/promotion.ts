@@ -20,4 +20,16 @@ export class PromotionProvider {
     console.log('Hello PromotionProvider Provider');
   }
 
+  getPromotion(): Observable<Promotion[]>{
+    return this.http.get<Promotion[]>(dbURL + 'promotions').map(
+      res => res
+    );
+  }
+
+  getFeaturedPromotion(): Observable<Promotion>{
+    return this.http.get<Promotion>(dbURL + 'promotions?featured=true').map(
+      res => res
+    )
+  }
+
 }

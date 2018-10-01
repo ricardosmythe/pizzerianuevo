@@ -1,1 +1,1 @@
-export const dbURL= "https://localhost:3000/"
+export const dbURL= "http://localhost:3000/"
