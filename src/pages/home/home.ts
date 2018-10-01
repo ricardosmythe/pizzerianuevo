@@ -16,8 +16,17 @@ export class HomePage implements OnInit{
   constructor(
   public navCtrl: NavController,
   private dishService: DishProvider,
-  ) 
+  private leaderService: LeaderProvider,
+  private promotionService: PromotionProvider,
+  @Inject("DbURL") private dbURL
+  ) {
 
+  }
+
+ngOnInit(){
+	this.getFeaturedDish();
+	this.getFeaturedPromotion();
+	this.getFeaturedLeader();
 }
 
 getFeaturedDish(){
@@ -33,3 +42,6 @@ getFeaturedDish(){
 		}
 	);
 }
+}
+
+

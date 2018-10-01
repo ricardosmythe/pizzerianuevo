@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Leader } from '../../shared/leader'
+import { Leader } from '../../shared/leader';
 import { dbURL } from '../../shared/dburl';
 
 /*

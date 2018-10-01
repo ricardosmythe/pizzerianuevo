@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import { Promotion } from '../../shared/promotion'
-import { dbURL } from '../../shared/dburl';s
+import { dbURL } from '../../shared/dburl';
 
 /*
   Generated class for the PromotionProvider provider.
