@@ -28,12 +28,12 @@ export class MenuPage {
     ) {
   }
 
-  getFeaturedDish(){
+  getDishes(){
     this.dishService
-    .getFeaturedDish()
+    .getDishes()
     .subscribe(
       response =>{
-        this.dishes= response[0];
+        this.dishes= response;
       console.log(this.dishes);
       }
     )
@@ -43,7 +43,7 @@ export class MenuPage {
   }
 
   ngOnInit(){
-    this.getFeaturedDish();
+    this.getDishes();
   }
 
   dishDetails(event, dish){

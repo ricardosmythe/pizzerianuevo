@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Dish } from '../../shared/dish';
 import { Comment } from '../../shared/comment'; 
 
+
 /**
  * Generated class for the DishdetailPage page.
  *
@@ -17,7 +18,7 @@ import { Comment } from '../../shared/comment';
 })
 export class DishdetailPage {
 
-  dish : dish;
+  dish : Dish;
   numComments : number;
   averageRat : string;
 
@@ -27,15 +28,15 @@ export class DishdetailPage {
     @Inject('DbURL')private DbURL
 ) {
     this.dish = this.navParams.get('dish');
-    this.numComments = this.dish.comment.length;
-    
-    Let total = 0;
+    this.numComments = this.dish.comments.length;
+
+    let total = 0;
     this.dish.comments.forEach(
-      comm => {
-        total += comm.rating
+      Comment => {
+        total += Comment.rating
       }
     );
-    this.averageRat = total/this.numComments).toFixed(2);
+    this.averageRat = (total/this.numComments).toFixed(2);
   }
 
   ionViewDidLoad() {

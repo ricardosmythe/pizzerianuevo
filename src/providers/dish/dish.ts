@@ -18,8 +18,8 @@ export class DishProvider {
     console.log('Hello DishProvider Provider');
   }
 
-  getDishes(): Observable<[Dish]>{
-  return this.http.get<[Dish]>(dbURL + 'didhrd').map(res => res);
+  getDishes(): Observable<Dish[]>{
+  return this.http.get<Dish[]>(dbURL + 'didhrd').map(res => res);
   }
 
   getFeaturedDish(): Observable<Dish>{
