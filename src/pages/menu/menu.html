@@ -18,6 +18,8 @@
 
 <ion-content padding>
   <div *ngIf="dishes; else loading">
-    
+    <ion-card *ngFor="let dish of dishes" (click)='dishDetails($event,dish)'>
+
+    </ion-card>
   </div>
 </ion-content>

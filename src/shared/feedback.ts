@@ -8,4 +8,4 @@ export interface Feedback{
 	agree: boolean;
 }
 
-ContactType=['None','Tel','Email'];
+export const ContactType=['None','Tel','Email'];
