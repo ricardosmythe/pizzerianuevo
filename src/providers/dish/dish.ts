@@ -19,7 +19,7 @@ export class DishProvider {
   }
 
   getDishes(): Observable<Dish[]>{
-  return this.http.get<Dish[]>(dbURL + 'didhrd').map(res => res);
+  return this.http.get<Dish[]>(dbURL + 'dishes').map(res => res);
   }
 
   getFeaturedDish(): Observable<Dish>{

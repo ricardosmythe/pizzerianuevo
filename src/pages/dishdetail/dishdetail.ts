@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Dish } from '../../shared/dish';
-import { Comment } from '../../shared/comment'; 
 
 
 /**
@@ -28,12 +27,13 @@ export class DishdetailPage {
     @Inject('DbURL')private DbURL
 ) {
     this.dish = this.navParams.get('dish');
+    console.log(this.dish)
     this.numComments = this.dish.comments.length;
 
     let total = 0;
     this.dish.comments.forEach(
-      Comment => {
-        total += Comment.rating
+      comment => {
+        total += comment.rating
       }
     );
     this.averageRat = (total/this.numComments).toFixed(2);

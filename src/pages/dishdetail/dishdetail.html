@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>dishdetail</ion-title>
+    <ion-title>Comentarios</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -24,5 +24,23 @@
       {{dish.description}}
     </p>
         </ion-card-content>
+        <div *ngIf="dishDetails">
+          <img src="{{dbURL + dish.image}}" />
+            <ion-card *ngFor="let comment of dish.comments">
+              <p>
+                  {{comment.author }}
+              </p>
+              <p>
+                  {{comment.comment }}
+              </p>
+              <p>
+                  {{comment.date }}
+              </p>
+              <p>
+                  {{comment.rating }}
+              </p>
+            </ion-card>
+          </div>
       </ion-card>
+     
 </ion-content>
